@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AquaTrace — IoT water quality monitoring</title>
+<meta name="description" content="Sensors and a cloud platform for continuous water quality monitoring in rivers, reservoirs and at water intakes: readings in real time, threshold alerts, history and reports.">
+<meta name="theme-color" content="#071a24">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AquaTrace — IoT water quality monitoring">
+<meta property="og:description" content="Sensors and a SaaS platform for continuous water monitoring: pH, turbidity, dissolved oxygen, temperature. Alerts, history, reports.">
+<meta property="og:locale" content="en_GB">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header" id="top">
+  <div class="wrap header-row">
+    <a class="brand" href="#top" aria-label="AquaTrace — back to top">
+      <svg class="brand-mark" viewBox="0 0 28 28" aria-hidden="true" focusable="false">
+        <path fill="#3ff0c8" d="M14 2.5S5 12 5 17.7a9 9 0 0 0 18 0C23 12 14 2.5 14 2.5Z"/>
+        <path fill="none" stroke="#06222c" stroke-width="1.7" stroke-linecap="round" d="M9.2 18.2c1.7-1.5 3.1-1.5 4.8 0s3.2 1.5 4.8 0"/>
+      </svg>
+      <span>AquaTrace</span>
+    </a>
+
+    <div class="header-actions">
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <a href="#problem">Problem</a>
+        <a href="#how">How it works</a>
+        <a href="#sensors">Sensors</a>
+        <a href="#features">Platform</a>
+        <a href="#status">Status</a>
+      </nav>
+      <a class="btn btn-primary btn-sm header-cta" href="#contact">Book a demo</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow eyebrow-light"><span class="pulse"></span>IoT water monitoring</p>
+        <h1>Water quality <span class="accent">in real time</span> — not in a lab report next week</h1>
+        <p class="lede">AquaTrace combines sensors with a cloud platform for continuous monitoring of rivers, reservoirs and water intakes. Readings every few minutes, alerts the moment a threshold is crossed, and the full history in one place.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Book a demo</a>
+          <a class="btn btn-ghost" href="#how">How it works</a>
+        </div>
+        <ul class="hero-points">
+          <li>No manual sampling rounds</li>
+          <li>Works with standard sensors</li>
+          <li>Pilot on your site</li>
+        </ul>
+      </div>
+
+      <div class="hero-visual">
+        <figure class="dash" aria-label="Example interface: a monitoring point on demonstration data">
+          <div class="dash-top">
+            <div>
+              <p class="dash-site">River Thames · intake no. 2</p>
+              <p class="dash-time">updated 2 minutes ago</p>
+            </div>
+            <span class="chip">demo data</span>
+          </div>
+
+          <div class="dash-main">
+            <div class="metric metric-lg">
+              <span class="metric-label">pH</span>
+              <span class="metric-value">7.4</span>
+              <span class="metric-state">in range</span>
+            </div>
+            <div class="metric-row">
+              <div class="metric">
+                <span class="metric-label">Turbidity</span>
+                <span class="metric-value">12<small>NTU</small></span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">Oxygen</span>
+                <span class="metric-value">8.1<small>mg/l</small></span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">Temp.</span>
+                <span class="metric-value">14.2<small>°C</small></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="chart">
+            <div class="chart-head">
+              <span>Turbidity, 24 hours</span>
+              <span class="chart-legend"><i></i>threshold 20 NTU</span>
+            </div>
+            <svg class="chart-svg" viewBox="0 0 320 96" role="img" aria-label="Turbidity over 24 hours: the reading rises above the threshold towards the evening">
+              <defs>
+                <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#3ff0c8" stop-opacity=".45"/>
+                  <stop offset="1" stop-color="#3ff0c8" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <line class="th" x1="0" y1="40" x2="320" y2="40"/>
+              <path class="area" d="M0,76 C20,74 30,70 50,72 C70,74 80,66 100,64 C120,62 130,66 150,60 C170,54 180,58 200,50 C218,43 228,44 240,38 C252,32 262,34 280,32 C296,30 308,31 320,30 L320,96 L0,96 Z"/>
+              <path class="line" d="M0,76 C20,74 30,70 50,72 C70,74 80,66 100,64 C120,62 130,66 150,60 C170,54 180,58 200,50 C218,43 228,44 240,38 C252,32 262,34 280,32 C296,30 308,31 320,30"/>
+              <circle class="peak" cx="320" cy="30" r="3.5"/>
+            </svg>
+            <div class="chart-axis" aria-hidden="true"><span>24 h ago</span><span>12 h</span><span>6 h</span><span>now</span></div>
+          </div>
+
+          <div class="alert">
+            <span class="alert-dot" aria-hidden="true"></span>
+            <p><strong>17:40</strong> turbidity 28 NTU — above threshold. The duty officer has been notified.</p>
+          </div>
+          <figcaption>This is what a monitoring point looks like. Values in the chart are test data.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap strip-row">
+      <span>pH</span>
+      <span>turbidity</span>
+      <span>dissolved oxygen</span>
+      <span>temperature</span>
+      <span>conductivity</span>
+      <span>ORP</span>
+      <span>ammonium</span>
+      <span>level</span>
+    </div>
+  </div>
+
+  <!-- PROBLEM -->
+  <section class="section" id="problem">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">The problem</p>
+        <h2>Manual sampling tells you what the water was like, not what it is like now</h2>
+        <p class="section-lede">One lab test a week captures a single moment. Everything that happens between samples stays invisible — until it surfaces as a complaint, an inspection finding or a failure.</p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+          </div>
+          <h3>One sample a week</h3>
+          <p>A lab result is a point in the past. A turbidity spike or an oxygen crash between sampling rounds simply never shows up.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 6.5h16M4 12h16M4 17.5h10"/><circle cx="18.5" cy="17.5" r="2.2"/></svg>
+          </div>
+          <h3>History in three places</h3>
+          <p>Site logbooks, an engineer's spreadsheet, paper certificates. Pulling together one year for one intake is a day's work.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3.5 22 20H2L12 3.5Z"/><path d="M12 10v4.5"/><circle cx="12" cy="17.4" r=".9" fill="currentColor" stroke="none"/></svg>
+          </div>
+          <h3>Alerts after the fact</h3>
+          <p>By the time anyone notices, the plume has moved downstream. That leaves less time to react — and to explain.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section class="section alt" id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">How it works</p>
+        <h2>From electrode to dashboard in four steps</h2>
+        <p class="section-lede">You don't have to replace your instruments. The platform takes readings from any sensor with a standard interface and turns them into a picture you can act on.</p>
+      </div>
+
+      <ol class="steps">
+        <li class="step">
+          <span class="step-num" aria-hidden="true">01</span>
+          <h3>Sensors in the water</h3>
+          <p>pH, turbidity, dissolved oxygen, temperature, conductivity. Submersible probes or flow-through cells, depending on the site.</p>
+        </li>
+        <li class="step">
+          <span class="step-num" aria-hidden="true">02</span>
+          <h3>Logger and connectivity</h3>
+          <p>Readings are collected and sent over NB-IoT, LTE-M or LoRaWAN. Mains or solar power, with a buffer for connectivity gaps.</p>
+        </li>
+        <li class="step">
+          <span class="step-num" aria-hidden="true">03</span>
+          <h3>Cloud</h3>
+          <p>MQTT ingestion, time-series storage, assets and monitoring points, calibration log.</p>
+        </li>
+        <li class="step">
+          <span class="step-num" aria-hidden="true">04</span>
+          <h3>Dashboard and alerts</h3>
+          <p>Web interface, threshold rules, notifications by email, SMS or webhook, reports and an API for your own systems.</p>
+        </li>
+      </ol>
+
+      <p class="note">We work with sensors that speak SDI-12, Modbus RTU or 4–20 mA. If the instruments are already on site, we connect them — we don't sell a replacement.</p>
+    </div>
+  </section>
+
+  <!-- SENSORS -->
+  <section class="section" id="sensors">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Sensors</p>
+        <h2>What we measure</h2>
+        <p class="section-lede">The baseline set is pH, turbidity and temperature. Everything else is added to suit the site: ion-selective electrodes, level sensors, flow meters.</p>
+      </div>
+
+      <div class="grid-4">
+        <article class="param">
+          <h3>pH</h3>
+          <p class="unit">pH units</p>
+          <p>Acidity and alkalinity. The baseline parameter for any monitoring point.</p>
+        </article>
+        <article class="param">
+          <h3>Turbidity</h3>
+          <p class="unit">NTU</p>
+          <p>Suspended solids and silt. A fast signal of runoff, discharge or filter performance.</p>
+        </article>
+        <article class="param">
+          <h3>Dissolved oxygen</h3>
+          <p class="unit">mg/l</p>
+          <p>The best single indicator of a water body's health and of treatment performance.</p>
+        </article>
+        <article class="param">
+          <h3>Temperature</h3>
+          <p class="unit">°C</p>
+          <p>Drives gas solubility, reaction rates and biological activity.</p>
+        </article>
+        <article class="param">
+          <h3>Conductivity</h3>
+          <p class="unit">µS/cm</p>
+          <p>Mineralisation. Saline discharges and shock loads show up immediately.</p>
+        </article>
+        <article class="param">
+          <h3>ORP</h3>
+          <p class="unit">mV</p>
+          <p>Redox potential. Used to verify that disinfection is working.</p>
+        </article>
+        <article class="param">
+          <h3>Ammonium</h3>
+          <p class="unit">mg/l</p>
+          <p>A marker of domestic sewage and of organic matter breaking down.</p>
+        </article>
+        <article class="param">
+          <h3>Level</h3>
+          <p class="unit">m</p>
+          <p>Flooding, overflow and protection of the intake screen.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section alt" id="features">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">The platform</p>
+        <h2>More than charts: a working tool for the duty officer and the engineer</h2>
+        <p class="section-lede">Data has to reach the person who makes the decision, in a form they can act on — not as a thousand-row export.</p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3.5 6.5 9 4l6 2.5L20.5 4v13.5L15 20l-6-2.5-5.5 2.5V6.5Z"/><path d="M9 4v13.5M15 6.5V20"/></svg>
+          </div>
+          <h3>Asset map</h3>
+          <p>Every monitoring point on one map: status, time of last contact, current readings and deviations.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M18 8.5a6 6 0 1 0-12 0c0 6-2.5 7.5-2.5 7.5h17S18 14.5 18 8.5Z"/><path d="M10 19.5a2.2 2.2 0 0 0 4 0"/></svg>
+          </div>
+          <h3>Threshold rules</h3>
+          <p>A separate rule set for each point: value, duration, time of day. Alerts go to the duty officer, not to a general channel.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3.5 17.5 9 11l4 4 7.5-8.5"/><path d="M15.5 6.5h5v5"/></svg>
+          </div>
+          <h3>History and charts</h3>
+          <p>Time series with no gaps: zoom to any period, overlay parameters, compare monitoring points against each other.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M6 3.5h8.5L19 8v12.5H6V3.5Z"/><path d="M14 3.5V8h4.5"/><path d="M9 12.5h7M9 16.5h4.5"/></svg>
+          </div>
+          <h3>Reports and exports</h3>
+          <p>A monthly report for a site in Excel or CSV, with periods, gaps and calibration marks.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M9 4.5h6M7 8h10M6 8v9.5A2 2 0 0 0 8 19.5h8a2 2 0 0 0 2-2V8"/><path d="M10 12h4"/></svg>
+          </div>
+          <h3>Calibration log</h3>
+          <p>Calibration and verification dates are tied to the individual sensor, so you know when a reading can be trusted.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="m8.5 8.5-4 3.5 4 3.5"/><path d="m15.5 8.5 4 3.5-4 3.5"/><path d="m13.5 5-3 14"/></svg>
+          </div>
+          <h3>API and integrations</h3>
+          <p>REST API and webhooks to push data into SCADA, asset systems or your own reporting.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASES -->
+  <section class="section" id="cases">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Where it fits</p>
+        <h2>Four typical jobs</h2>
+      </div>
+
+      <div class="grid-2">
+        <article class="case">
+          <span class="tag">Water intakes</span>
+          <h3>Don't put water into supply that you'll have to explain later</h3>
+          <p>Turbidity and pH at the inlet, and again after treatment. You see the source shift, not the complaints a day later.</p>
+        </article>
+        <article class="case">
+          <span class="tag">Rivers and reservoirs</span>
+          <h3>Points above and below a discharge</h3>
+          <p>Two points instead of one: the difference shows what a specific source contributes, rather than the river's average.</p>
+        </article>
+        <article class="case">
+          <span class="tag">Aquaculture</span>
+          <h3>Oxygen in the pens, before the stock loss</h3>
+          <p>Overnight oxygen sags and temperature swings, flagged while there is still time to start aeration.</p>
+        </article>
+        <article class="case">
+          <span class="tag">Industrial effluent</span>
+          <h3>Outfall and compliance point</h3>
+          <p>A continuous record at the outfall and at the compliance point, and a log that feeds the site's reporting without manual reconciliation.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATUS -->
+  <section class="section status-section" id="status">
+    <div class="wrap">
+      <div class="status-panel">
+        <div class="status-head">
+          <p class="eyebrow eyebrow-light">Project status</p>
+          <h2>An early-stage project — and we say so</h2>
+          <p class="lede">AquaTrace is a young company. The platform and the hardware are being built now, and the first sites are going into pilot. There are no client logos or deployment figures on this site, because they don't exist yet.</p>
+        </div>
+
+        <!-- TODO: check both lists against the actual state of the project before publishing -->
+        <div class="status-cols">
+          <div class="status-col">
+            <h3>Already in place</h3>
+            <ul class="ticks">
+              <li>Platform prototype: ingestion, monitoring-point view, charts, alerts.</li>
+              <li>Connection scheme for standard sensors — SDI-12, Modbus, 4–20 mA.</li>
+              <li>A demo stand on test data: it's what we show on a call.</li>
+            </ul>
+          </div>
+          <div class="status-col">
+            <h3>In progress</h3>
+            <ul class="ticks ticks-muted">
+              <li>Field enclosure and autonomous power for points on the water.</li>
+              <li>Reporting aligned with water company and industrial requirements.</li>
+              <li>Pilot installations at real sites.</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="status-cta">We're looking for one to three pilot sites: an intake, a river point or a fish farm. Terms are agreed case by case — <a href="#contact">get in touch</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <div class="contact-panel">
+        <div>
+          <p class="eyebrow eyebrow-light">Get in touch</p>
+          <h2>See the platform on demo data</h2>
+          <p class="lede">Twenty minutes: the monitoring-point view, alerts, reports. Tell us about your site and we'll propose a sensor set and a pilot plan.</p>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:hello@aquatrace.co.uk?subject=AquaTrace%20demo">Email us</a>
+            <a class="btn btn-ghost" href="mailto:hello@aquatrace.co.uk">hello@aquatrace.co.uk</a>
+          </div>
+        </div>
+        <aside class="contact-aside">
+          <h3>Useful for the call</h3>
+          <ul class="ticks">
+            <li>The site and the monitoring point</li>
+            <li>Which parameters matter first</li>
+            <li>Whether you already have instruments, and what connectivity is available</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <div class="footer-brand">
+      <a class="brand" href="#top" aria-label="AquaTrace — back to top">
+        <svg class="brand-mark" viewBox="0 0 28 28" aria-hidden="true" focusable="false">
+          <path fill="#3ff0c8" d="M14 2.5S5 12 5 17.7a9 9 0 0 0 18 0C23 12 14 2.5 14 2.5Z"/>
+          <path fill="none" stroke="#06222c" stroke-width="1.7" stroke-linecap="round" d="M9.2 18.2c1.7-1.5 3.1-1.5 4.8 0s3.2 1.5 4.8 0"/>
+        </svg>
+        <span>AquaTrace</span>
+      </a>
+      <p>Sensors and a cloud platform for water quality monitoring. United Kingdom.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="#how">How it works</a>
+      <a href="#sensors">Sensors</a>
+      <a href="#features">Platform</a>
+      <a href="#status">Status</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© <span id="year">2026</span> AquaTrace</p>
+    <p>The product is in development. Values in the demo charts are test data.</p>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
